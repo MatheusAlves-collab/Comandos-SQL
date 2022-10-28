@@ -9,7 +9,7 @@ TABLE_CATALOG = 'master' and
 TABLE_SCHEMA = 'dbo' and
 TABLE_TYPE = 'BASE TABLE';
 
--- Listar informações das colunas 
+-- Listar informaÃ§Ãµes das colunas 
 SELECT *
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE 
@@ -17,3 +17,4 @@ WHERE
      TABLE_NAME   = 'yourTableName' AND 
      COLUMN_NAME  = 'yourColumnName'
 
+exec sp_help 'TABLE.ETL_TABELA'
