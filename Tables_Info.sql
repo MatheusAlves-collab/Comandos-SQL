@@ -18,3 +18,9 @@ WHERE
      COLUMN_NAME  = 'yourColumnName'
 
 exec sp_help 'TABLE.ETL_TABELA'
+
+-- Verificar códigos de VIEWs
+
+SELECT text FROM sys.syscomments WHERE id = object_id ('dbo.myview')
+SELECT definition FROM sys.all_sql_modules WHERE object_id = object_id ('dbo.myview')
+sp_helptext '[legal].[VW_TRABALHISTA_LITIGIO]' -- Também funciona para Store Procedure
